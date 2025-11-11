@@ -1,0 +1,219 @@
+/* ==========================
+   BLOG — REDE DO BEM
+   ========================== */
+
+/* Reutiliza variáveis do site principal */
+:root {
+  --primary: #1b9e6a;
+  --primary-dark: #16855a;
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --muted: #64748b;
+  --radius: 10px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* ==== Reset básico ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ==== Container padrão ==== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==== Cabeçalho ==== */
+header {
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ==== Navegação ==== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+
+/* ======= CREATE POST ======= */
+.create-post {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.create-post h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.create-post input,
+.create-post textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.create-post input:focus,
+.create-post textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+/* ======= POSTS SECTION ======= */
+.posts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.post {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.post p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.divider {
+  border: 0;
+  border-top: 2px solid #e3e6ea;
+  margin: 40px 0;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+.footer-inner {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-item h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact-item ul {
+  list-style: none;
+}
+
+.contact-item ul li {
+  margin-bottom: 8px;
+}
+
+.contact-item a {
+  color: #00a8ff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+  .header-inner h1 {
+    font-size: 1.6rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .create-post,
+  .post {
+    padding: 20px;
+  }
+}

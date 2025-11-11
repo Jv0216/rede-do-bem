@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voluntários — Rede do Bem</title>
+  <link rel="stylesheet" href="css/voluntarios.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header>
+    <div class="container header-inner">
+      <h1 class="brand">Rede do Bem</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="ongs.html">ONGs</a></li>
+          <li><a href="voluntarios.html">Voluntários</a></li>
+          <li><a href="doacoes.html">Doações</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <br>
+
+  <main class="container section">
+    <section class="vol-form">
+      <h2>Cadastre-se como voluntário</h2>
+      <form id="volForm">
+        <input type="text" id="vname" placeholder="Nome completo" required />
+        <input type="email" id="vemail" placeholder="E-mail" required />
+        <input type="text" id="vcity" placeholder="Cidade" required />
+        <select id="varea">
+          <option value="educacao">Educação</option>
+          <option value="saude">Saúde</option>
+          <option value="abrigo">Abrigo</option>
+          <option value="outros">Outros</option>
+        </select>
+        <textarea id="vmessage" placeholder="Conte-nos sobre sua disponibilidade" rows="4"></textarea>
+        <button class="btn" type="submit">Enviar Cadastro</button>
+      </form>
+
+      <div id="volSuccess" class="success" style="display:none;">Obrigado! Cadastro recebido.</div>
+    </section>
+
+    <section class="vol-list">
+      <h3>Voluntários Cadastrados (simulação)</h3>
+      <div id="volList"></div>
+    </section>
+  </main>
+
+  <footer>
+  <div class="container footer-inner contact-footer">
+    <div class="contact-types">
+      <div class="contact-item">
+        <h3>Contato</h3>
+        <ul>
+          <li>Email: <a href="mailto:contato@rededobem.org">contato@rededobem.org</a></li>
+          <li>Telefone: <a href="tel:+5521976926199">+55 (21) 97692-6199</a></li>
+          <li>Endereço: Rua Exemplo, 123 — Rio de Janeiro, RJ</li>
+          <li>Horário: Seg–Sex 09:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Rede do Bem</p>
+  </div>
+</footer>
+
+  <script src="js/voluntarios.js"></script>
+</body>
+</html>

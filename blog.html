@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Rede do Bem</title>
+  <link rel="stylesheet" href="css/blog.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1 class="brand">Rede do Bem</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="ongs.html">ONGs</a></li>
+          <li><a href="voluntarios.html">Voluntários</a></li>
+          <li><a href="doacoes.html">Doações</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <br>
+
+  <main class="container section">
+    <!-- Formulário de criação de post -->
+    <section class="create-post">
+      <h2>Nova Publicação</h2>
+      <form id="postForm">
+        <input type="text" id="title" placeholder="Título da postagem" required />
+        <textarea id="content" placeholder="Escreva aqui o conteúdo da postagem..." rows="5" required></textarea>
+        <button type="submit" class="btn">Publicar</button>
+      </form>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Área onde as postagens aparecerão -->
+    <section id="posts" class="posts-section">
+      <!-- Postagens serão carregadas dinamicamente -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner contact-footer">
+      <div class="contact-types">
+        <div class="contact-item">
+          <h3>Contato</h3>
+          <ul>
+            <li>Email: <a href="mailto:contato@rededobem.org">contato@rededobem.org</a></li>
+            <li>Telefone: <a href="tel:+5521976926199">+55 (21) 97692-6199</a></li>
+            <li>Endereço: Rua Exemplo, 123 — Rio de Janeiro, RJ</li>
+            <li>Horário: Seg–Sex 09:00–18:00</li>
+          </ul>
+        </div>
+
+      <p class="copyright">© 2025 Rede do Bem</p>
+    </div>
+  </footer>
+
+  <script src="js/blog.js"></script>
+</body>
+</html>

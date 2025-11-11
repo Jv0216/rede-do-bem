@@ -1,0 +1,226 @@
+/* ======== Rede do Bem - Página ONGs ======== */
+
+/* Reutiliza variáveis do site principal */
+:root {
+  --primary: #1b9e6a;
+  --primary-dark: #16855a;
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --muted: #64748b;
+  --radius: 10px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* ==== Reset básico ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ==== Container padrão ==== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==== Cabeçalho ==== */
+header {
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ==== Navegação ==== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+
+/* ======== Seção de Filtro ======== */
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter input,
+.filter select {
+  padding: 0.7rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.filter input:focus,
+.filter select:focus {
+  border-color: var(--primary);
+}
+
+/* ======== Lista de ONGs ======== */
+.ongs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ======== Card da ONG ======== */
+.ong-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ong-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.ong-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.ong-info {
+  padding: 1.2rem;
+  flex: 1;
+}
+
+.ong-info h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.ong-info p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.ong-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ong-tag {
+  background: rgba(27, 158, 106, 0.1);
+  color: var(--primary-dark);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+.footer-inner {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-item h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact-item ul {
+  list-style: none;
+}
+
+.contact-item ul li {
+  margin-bottom: 8px;
+}
+
+.contact-item a {
+  color: #00a8ff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+
+
+/* ======== Responsividade ======== */
+@media (max-width: 768px) {
+  .sub-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter input,
+  .filter select {
+    width: 100%;
+  }
+}
+
+
