@@ -1,0 +1,410 @@
+/* Reutiliza variáveis do site principal */
+:root {
+  --primary: #1b9e6a;
+  --primary-dark: #16855a;
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --muted: #64748b;
+  --radius: 10px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* ==== Reset básico ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+   display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==== Container padrão ==== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==== Cabeçalho ==== */
+header {
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ==== Navegação ==== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+
+.container.section {
+  width: 90%;
+  margin: 40px auto;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+ h2, h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.donation-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.donation-form p {
+  margin-bottom: 20px;
+}
+
+input, select, button, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.preset-values {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.preset-btn {
+  background: #e9ecef;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.preset-btn:hover {
+background: var(--primary-dark);
+  color: #fff;
+}
+
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+.success {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.payment-details {
+  margin-top: 15px;
+}
+
+.qr-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.qr-container canvas {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.card-fields input {
+  margin-bottom: 10px;
+}
+
+.boleto-box {
+  background: #f1f1f1;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 10px;
+  font-family: monospace;
+}
+
+.transparency {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+#donationsList {
+  margin-top: 15px;
+}
+
+.donation-item {
+  background: #f1f1f1;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* ======= FOOTER ======= */
+footer {
+    background: #222;
+    color: #ccc;
+    padding: 30px 0;
+    margin-top: 50px;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+
+.footer-inner {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-item h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact-item ul {
+  list-style: none;
+}
+
+.contact-item ul li {
+  margin-bottom: 8px;
+}
+
+.contact-item a {
+  color: #00a8ff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+
+/* ==== RESPONSIVE DESIGN ==== */
+/* Responsive refinements: keep styles above intact */
+@media (max-width: 1024px) {
+    .container {
+        width: 94%;
+    }
+
+    .donation-form,
+    .transparency {
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .qr-container canvas {
+        max-width: 260px;
+        width: 60%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+        padding: 0.75rem 0;
+    }
+
+    .brand {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    /* Make nav wrap to multiple rows and center items */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    nav a {
+        padding: 0.35rem 0.55rem;
+        border-radius: 8px;
+        background: rgba(27, 158, 106, 0.06);
+    }
+
+    .container.section {
+        margin: 20px auto;
+    }
+
+    .donation-form,
+    .transparency {
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+
+    input,
+    select,
+    button,
+    textarea {
+        font-size: 16px;
+    }
+
+    .preset-values {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .preset-btn {
+        flex: 1 1 100px;
+        min-width: 90px;
+        padding: 8px 12px;
+    }
+
+    .card-fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .card-fields input {
+        margin-bottom: 0;
+    }
+
+    .donation-item {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .qr-container {
+        margin-top: 12px;
+    }
+
+  footer {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.15rem;
+    }
+
+    nav ul {
+        gap: 0.45rem;
+    }
+
+    .donation-form,
+    .transparency {
+        padding: 12px;
+    }
+
+    .preset-values {
+        gap: 6px;
+    }
+
+    .preset-btn {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+        min-width: 72px;
+    }
+
+    .btn {
+        padding: 10px;
+    }
+
+    .card-fields {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    .qr-container canvas {
+        width: 220px;
+        max-width: 72%;
+    }
+  footer {
+    padding: 20px 0;
+  }
+}
+
+    .donation-form,
+    .transparency {
+        border-radius: calc(var(--radius) - 2px);
+    }
+
+
+/* Small touch improvements for all sizes */
+.preset-btn,
+.btn,
+nav a {
+    transition: transform 120ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.preset-btn:active,
+.btn:active {
+    transform: translateY(1px);
+}

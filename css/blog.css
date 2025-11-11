@@ -204,18 +204,35 @@ footer {
 
 /* ======= RESPONSIVIDADE ======= */
 @media (max-width: 768px) {
-  .header-inner h1 {
-    font-size: 1.6rem;
-  }
-
-  nav ul {
+@media (max-width: 768px) {
+  /* Header stacks to save horizontal space */
+  .header-inner {
     flex-direction: column;
-    gap: 10px;
+    align-items: stretch;
+    gap: 0.6rem;
+    padding: 0.75rem 0;
   }
 
+  .brand {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  /* Make nav wrap to multiple rows and center items */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  nav a {
+    padding: 0.35rem 0.55rem;
+    border-radius: 8px;
+    background: rgba(27, 158, 106, 0.06);
+  }
   .create-post,
   .post {
     padding: 20px;
   }
 }
-
+}
