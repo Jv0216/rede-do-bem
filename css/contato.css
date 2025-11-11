@@ -408,3 +408,27 @@ nav a {
 .btn:active {
     transform: translateY(1px);
 }
+
+
+/* ==== IFRAME STYLING ==== */
+iframe {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    iframe {
+        margin: 2px 0;
+        border-radius: calc(var(--radius) - 2px);
+    }
+}
+
+@media (max-width: 480px) {
+    iframe {
+        margin: 10px 0;
+    }
+}
