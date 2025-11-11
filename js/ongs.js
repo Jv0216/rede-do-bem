@@ -14,21 +14,21 @@ const ongs = [
     cidade: "São Paulo",
     tipo: "saude",
     descricao: "Oferece atendimentos médicos e psicológicos voluntários em comunidades.",
-    imagem: "https://i.imgur.com/UIyguyZ.jpeg"
+    imagem: "img/cuidareviver.jpg"
   },
   {
     nome: "Lar Esperança",
     cidade: "Belo Horizonte",
     tipo: "abrigo",
     descricao: "Abrigo para crianças em situação de vulnerabilidade social.",
-    imagem: "https://i.imgur.com/ArVFGvA.jpeg"
+    imagem: "img/laresperanca.jpg"
   },
   {
     nome: "Mãos Amigas",
     cidade: "Fortaleza",
     tipo: "saude",
     descricao: "Campanhas de vacinação e ações de saúde preventiva em bairros carentes.",
-    imagem: "https://i.imgur.com/3oucW3U.jpeg"
+    imagem: "img/maosamigas.jpg"
   },
   {
     nome: "Futuro Brilhante",
@@ -42,7 +42,7 @@ const ongs = [
     cidade: "Recife",
     tipo: "abrigo",
     descricao: "Abrigo e reabilitação para pessoas em situação de rua.",
-    imagem: "https://i.imgur.com/u8EKX3Q.jpeg"
+    imagem: "img/casadosol.jpg"
   }
 ];
 
