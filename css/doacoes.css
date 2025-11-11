@@ -232,3 +232,122 @@ footer {
   font-size: 0.9rem;
   color: #999;
 }
+
+
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    padding: 0.75rem 0;
+  }
+
+  .brand {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  /* Make nav wrap to multiple rows and center items */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  nav a {
+    padding: 0.35rem 0.55rem;
+    border-radius: 8px;
+    background: rgba(27, 158, 106, 0.06);
+  }
+
+  .container.section {
+    margin: 20px auto;
+  }
+
+  .donation-form,
+  .transparency {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  input,
+  select,
+  button,
+  textarea {
+    font-size: 16px;
+  }
+
+  .preset-values {
+    flex-wrap: wrap;
+  }
+
+  .preset-btn {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .card-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .card-fields input {
+    margin-bottom: 0;
+  }
+
+  .donation-item {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    padding: 20px 0;
+  }
+
+  .footer-inner {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  .donation-form,
+  .transparency {
+    padding: 12px;
+  }
+
+  .preset-values {
+    gap: 5px;
+  }
+
+  .preset-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 10px;
+  }
+
+  .card-fields {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}

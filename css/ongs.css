@@ -207,20 +207,182 @@ footer {
 
 
 /* ======== Responsividade ======== */
-@media (max-width: 768px) {
-  .sub-header h1 {
-    font-size: 1.5rem;
+/* ======== Responsividade e ajustes visuais ======== */
+
+/* Medium screens (laptops / tablets) */
+@media (max-width: 1024px) {
+  .header-inner {
+    padding: 0.85rem 0;
+    gap: 0.5rem;
   }
 
+  nav ul {
+    gap: 0.8rem;
+  }
+
+  .ongs-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .ong-img {
+    height: 200px;
+  }
+}
+
+/* Tablets / small laptops and large phones */
+@media (max-width: 768px) {
+  /* Header stacks to save horizontal space */
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    padding: 0.75rem 0;
+  }
+
+  .brand {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  /* Make nav wrap to multiple rows and center items */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  nav a {
+    padding: 0.35rem 0.55rem;
+    border-radius: 8px;
+    background: rgba(27, 158, 106, 0.06);
+  }
+
+  /* Filter becomes stacked and full width controls */
   .filter {
     flex-direction: column;
     align-items: stretch;
+    margin: 1.25rem 0 2rem;
+    gap: 0.75rem;
   }
 
   .filter input,
   .filter select {
     width: 100%;
   }
+
+  /* Cards use single column list for readability */
+  .ongs-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .ong-card {
+    flex-direction: column;
+  }
+
+  .ong-img {
+    height: 220px;
+  }
+
+  .ong-info {
+    padding: 1rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    gap: 0.4rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    padding: 0.25rem 0.45rem;
+  }
+
+  .filter {
+    gap: 0.5rem;
+  }
+
+  .filter input,
+  .filter select {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .ong-img {
+    height: 160px;
+  }
+
+  .ong-info h3 {
+    font-size: 1.05rem;
+  }
+
+  .ong-info p {
+    font-size: 0.9rem;
+  }
+
+  .ong-tag {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  footer {
+    padding: 24px 0;
+  }
+
+  .footer-inner {
+    text-align: center;
+  }
+}
+
+/* Small visual enhancements (works at all sizes) */
+.ong-card,
+.filter input,
+.filter select,
+nav a {
+  transition: transform 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.ong-card:focus-within,
+.ong-card:hover {
+  transform: translateY(-6px);
+}
+
+.ong-tag {
+  display: inline-block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.ong-tag:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(23, 120, 87, 0.08);
+}
+
+/* Ensure images remain crisp and accessible */
+.ong-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Improve focus outlines for keyboard users */
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: 3px solid rgba(27, 158, 106, 0.18);
+  outline-offset: 2px;
 }
 
 

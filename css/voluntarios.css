@@ -225,3 +225,87 @@ footer {
   font-size: 0.9rem;
   color: #999;
 }
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    padding: 0.75rem 0;
+  }
+
+  .brand {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  /* Make nav wrap to multiple rows and center items */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  nav a {
+    padding: 0.35rem 0.55rem;
+    border-radius: 8px;
+    background: rgba(27, 158, 106, 0.06);
+  }
+
+  .vol-form {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .vol-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .vol-list {
+    padding: 1.5rem;
+  }
+
+  #volList {
+    grid-template-columns: 1fr;
+  }
+
+  .vol-card {
+    padding: 1rem;
+  }
+
+  .btn {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .vol-form {
+    padding: 1rem;
+  }
+
+  .vol-form h2 {
+    font-size: 1.1rem;
+  }
+
+  .vol-list h3 {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    padding: 20px 0;
+  }
+}

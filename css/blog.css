@@ -163,7 +163,8 @@ footer {
   background: #222;
   color: #ccc;
   padding: 30px 0;
-  margin-top: 50px;
+  margin-top: 120px;
+
 }
 
 .footer-inner {
@@ -217,3 +218,4 @@ footer {
     padding: 20px;
   }
 }
+
