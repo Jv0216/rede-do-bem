@@ -51,6 +51,15 @@ header {
   color: var(--primary);
 }
 
+.brand a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand a :hover {
+  text-decoration: underline;
+}
+
 /* ==== Navegação ==== */
 nav ul {
   list-style: none;
@@ -189,7 +198,9 @@ background: var(--primary-dark);
   padding: 10px;
   margin-bottom: 10px;
 }
-
+#donationform label{
+  padding-bottom: 100px;
+}
 /* ======= FOOTER ======= */
 footer {
   background: #222;

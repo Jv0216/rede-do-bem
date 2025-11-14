@@ -53,6 +53,20 @@ header {
   color: var(--primary);
 }
 
+.brand a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand a :hover {
+  text-decoration: underline;
+  outline: none;
+}
+
+.brand a:focus {
+  outline: none;
+}
+
 /* ==== Navegação ==== */
 nav ul {
   list-style: none;
@@ -80,24 +94,36 @@ nav a:hover {
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;;
 }
 
-.filter input,
-.filter select {
-  padding: 0.7rem 1rem;
+.filter input{
+padding: 1rem 3.2rem 1rem 1rem; /* <-- aumentamos o padding-right */
   border: 1px solid #d1d5db;
-  border-radius: var(--radius);
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: #fff;
+  outline: none;
+}
+
+.filter select {
+  padding: 1rem 3.2rem 1rem 1rem; /* <-- aumentamos o padding-right */
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
   font-size: 1rem;
   background-color: #fff;
   box-shadow: var(--shadow);
   outline: none;
   transition: border-color 0.3s ease;
-}
 
-.filter input:focus,
-.filter select:focus {
-  border-color: var(--primary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%2364748b' height='18' width='18' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 18px;
 }
 
 /* ======== Lista de ONGs ======== */
@@ -116,11 +142,6 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.ong-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .ong-img {
@@ -142,7 +163,7 @@ nav a:hover {
 
 .ong-info p {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.80rem;
   margin-bottom: 0.75rem;
 }
 

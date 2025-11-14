@@ -54,6 +54,15 @@ header {
   color: var(--primary);
 }
 
+.brand a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand a :hover {
+  text-decoration: underline;
+}
+
 /* ==== Navegação ==== */
 nav ul {
   list-style: none;

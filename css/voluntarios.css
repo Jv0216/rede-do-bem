@@ -25,7 +25,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
-}
+} 
 
 /* ==== Container padrão ==== */
 .container {
@@ -54,6 +54,15 @@ header {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
+}
+
+.brand a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand a :hover {
+  text-decoration: underline;
 }
 
 /* ==== Navegação ==== */
@@ -97,8 +106,18 @@ nav a:hover {
   gap: 1rem;
 }
 
+
+.vol-form select{
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
 .vol-form input,
-.vol-form select,
 .vol-form textarea {
   padding: 0.8rem 1rem;
   border-radius: 8px;
@@ -108,8 +127,17 @@ nav a:hover {
   transition: border 0.2s ease;
 }
 
+.vol-form select:focus{
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  color: #1e293b; 
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
 .vol-form input:focus,
-.vol-form select:focus,
 .vol-form textarea:focus {
   border-color: var(--primary);
 }
